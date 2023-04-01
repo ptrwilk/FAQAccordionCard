@@ -1,0 +1,153 @@
+@import url('../colors.css');
+
+.container{
+    display: flex;
+    height: 500px;
+    border-radius: 1.3rem;
+    background-color: white;
+}
+
+.container .background{
+    width: 450px;
+    position: relative;
+    height: 100%;
+}
+
+.overflow-hidden{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container .background .woman-online{
+    position: absolute;
+    transform: translate(-17%, 20%);
+    z-index: 1;
+}
+
+.container .background .bg-pattern{
+    position: absolute;
+    transform: translate(-60%, -30%);
+    z-index: 0;
+}
+
+.container .background .box{
+    position: absolute;
+    top: 0;
+    transform: translate(-48%, 112%);
+    z-index: 2;
+}
+
+.container .faq{
+    padding: 5rem 5rem 1rem 0;
+    width: 430px;
+    overflow: scroll;
+}
+
+.container .faq h1{
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.container .faq .items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.container .faq .item{
+    width: 100%;
+}
+
+.container .faq .item:hover h2{
+    color: var(--soft-red);
+}
+
+.container .faq h2{
+    color: var(--very-dark-grayish-blue);
+}
+
+.container .faq p{
+   color: var(--dark-grayish-blue);
+}
+
+@media (max-width : 900px) {
+    
+    .container {
+        flex-direction: column;
+        padding-top: 15rem;
+        height: auto;
+    }
+
+    .container .background{
+        width : 100%;
+    }
+
+    .overflow-hidden{
+        overflow: visible;
+    }
+
+    .container .faq{
+        width : 100%;
+        padding: 2rem;
+    }
+
+    .container .faq h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .container .background .bg-pattern,
+    .container .background .woman-online{
+        top: -50%;
+        left: 50%;
+        width: 500px;
+        transform: translate(-50%, -123%);
+    }
+
+    .container .background .bg-pattern{
+        transform: translate(-50%, -105%);
+    }
+}
+
+@media (max-width : 650px) {
+
+    .container{
+        padding-top: 8rem;
+    }
+
+    .container .faq h1{
+        font-size: 42px;
+    }
+    
+    .container .background .bg-pattern,
+    .container .background .woman-online{
+        width: 300px;
+        transform: translate(-50%, -117%);
+    }
+
+    .container .background .bg-pattern{
+        transform: translate(-50%, -100%);
+    }
+}
+
+@media (max-width : 450px) {
+
+    .container{
+        padding-top: 6rem;
+    }
+
+    .container .faq h1{
+        font-size: 36px;
+    }
+
+    .container .background .bg-pattern,
+    .container .background .woman-online{
+        width: 220px;
+        transform: translate(-50%, -119%);
+    }
+
+    .container .background .bg-pattern{
+        transform: translate(-50%, -100%);
+    }
+}
